@@ -1,0 +1,79 @@
+Opracowanie: dr inż. Łukasz Maliński, Politechnika Śląska, 2020
+PYTANIA NA EGZAMIN Z PRZEDMIOTU:
+PODSTAWY PROGRAMOWANIA KOMPUTERÓW
+POZIOM PODSTAWOWY
+Podstawy programowania i instrukcje sterujące
+1. Jakie fundamentalne typy danych występują w C++ i do czego służą?
+2. Na czym polega przesłanianie nazw zmiennych i jak odwołać się do przesłoniętej zmiennej globalnej?
+3. Kiedy na końcu instrukcji stawiamy średnik, a kiedy nie?
+4. Jak wygląda deklaracja zmiennych i stałych (wszystkie rodzaje) w C++?
+5. Jaka jest różnica miedzy operatorem = a operatorem ==, i jakie są konsekwencje ich pomylenia?
+6. Jakie znasz operatory logiczne i jak zapisuje się złożone wyrażenia logiczne?
+7. Jak sprawdzić, czy wartość zmiennej znajduje się w, lub poza zakresem (a, b)?
+8. Jakie znasz instrukcje warunkowe i jak wygląda ich składnia?
+9. Jakie znasz rodzaje pętli w C++ i czym się one różnią?
+10. Jakie znasz instrukcje sterujące przebiegiem pętli i jak one działają?
+Operacje tablicowe i wskaźnikowe i funkcje
+1. Wyjaśnij czym jest tablica, jak się ją tworzy i jak indeksuje?
+2. W jaki sposób w C++ przetwarza się łańcuchy tekstowe (c-stringi)?
+3. Czym jest nazwa tablicy i jakie jest jej powiązanie ze wskaźnikami?
+4. Wyjaśnij czym jest wskaźnik, a czym typ wskaźnika?
+5. Na czym polega inkrementacja/dekrementacja wskaźnika?
+6. Jak tworzy się i indeksuje tablice wielowymiarowe?
+7. Czym jest funkcja i jak wygląda składnia jej definicji?
+8. Jakie są sposoby przekazywania informacji do funkcji i czym się one różnią?
+9. Jaka jest różnica miedzy wskaźnikiem a referencją?
+10. Co to znaczy, że funkcja zwraca wartość i jak odebrać tą wartość w kodzie?
+Debugowanie, testowanie kodu i obsługa wyjątków
+1. Czym różnią się błędy czasu kompilacji od błędów czasu wykonania?
+2. Jaka jest strategia usuwania błędów czasu kompilacji?
+3. Jaka jest strategia usuwania błędów czasu wykonania?
+4. Jakie wymagania stawiamy testom jednostkowym?
+5. Czym jest i jak działa typowy test jednostkowy?
+6. Na czym polega technika TDD?
+7. Jakie mogą być konsekwencje braku inicjalizacji zmiennej lokalnej?
+8. Jak działa mechanizm obsługi wyjątków (omów składnię i przebieg sterowania)?
+9. Co się stanie jeśli wyjątek nie zostanie obsłużony za blokiem try?
+10. Do czego służy strumień cerr i jakie ma zastosowanie w debugowaniu?
+Opracowanie: dr inż. Łukasz Maliński, Politechnika Śląska, 2020
+POZIOM ŚREDNI:
+1. Co to jest preprocesor i jaką pełni rolę przy pisaniu programu?
+2. Jakie znasz mechanizmy kompilacji warunkowej i jak one działają?
+3. Kiedy wykona się dzielenie całkowite, a kiedy rzeczywiste i jak wymusić jedno i drugie?
+4. Jakie znasz zastosowania dla dzielenia całkowitego i operacji modulo?
+5. W jaki sposób możemy sterować formatem prezentacji liczb zmiennoprzecinkowych?
+6. Jak przebiega optymalizacja przetwarzania wyrażeń logicznych?
+7. Jak można zastąpić pętlę for pętlą while i odwrotnie, i co może powodować problemy przy takim zastępowaniu?
+8. Jaki problem trzeba uwzględnić, gdy licznikiem pętli jest typ rzeczywisty?
+9. Jak poprawnie losować liczby całkowite i rzeczywiste?
+10. Jak działa zakresowa wersja pętli for?
+11. Jakie mogą być konsekwencje odczytu i zapisu poza zakresem tablicy?
+12. Jak przelicza się indeksy w tablicy dwuwymiarowej na numer jej elementu i odwrotnie?
+13. Jak zbudowane są w pamięci tablice wielowymiarowe i jak to się przekłada na ich indeksowanie?
+14. Czym rożni się const int * od int * const?
+15. Jak działa bufor cykliczny?
+16. Czym jest wskaźnik pusty i jakie ma zastosowanie w programowaniu?
+17. Na czym polega tabelaryzacja logiki i obliczeń i jakie znasz przykłady ich użycia?
+18. Jak można zgłosić informację, czy funkcja zakończyła się poprawnie?
+19. W jaki sposób można odebrać z funkcji więcej niż jedną wartość?
+20. Jak definiuje się algorytmy rekurencyjne?
+21. Jak przechwycić wyjątek dowolnego typu?
+22. Gdzie powinna zachodzić obsługa sytuacji wyjątkowej?
+23. Jak napisać test jednostkowy sprawdzający, czy funkcja poprawnie wyrzuci wyjątek?
+24. Na czym polega zawężanie obszaru przeszukiwań w debugowaniu?
+25. Na czym polega stabilizacja i izolacja błędu w debugowaniu?
+26. Jakie operacje można wykonać na wskaźnikach, a jakich nie?
+27. Jak jest różnica między preinkrementacją, a postinkrementacją?
+POZIOM ZAAWANSOWANY:
+1. Jaka jest różnica pomiędzy const i constexpr, kiedy lepiej użyć const, a kiedy constexpr?
+2. Co jest przyczyną powstawania błędów numerycznych i jaki znasz sposób ich redukcji?
+3. Jakie znasz sposoby na optymalizację obliczeń arytmetycznych i na czym one polegają?
+4. Jakie znasz sposoby optymalizacji przetwarzania instrukcji warunkowych?
+5. Jakie znasz sposoby optymalizacji przetwarzania instrukcji iteracyjnych?
+6. Jakie znasz kryteria zbieżności algorytmów numerycznych?
+7. Jak posortować tablicę według kilku kryteriów jednocześnie?
+8. Jak wykonać losowanie ze zbioru bez zwracania?
+9. Czym różni się przekazywanie argumentów funkcji przez referencję i przez wskaźnik?
+10. Jak dobierać scenariusze testowe dla programu?
+11. Czym różni się kopia binarna od kopii element-po-elemencie?
+12. Jak można wychwycić błędy, które pojawiają się w rzadkich losowych przypadkach?
