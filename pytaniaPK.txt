@@ -1,0 +1,89 @@
+POZIOM PODSTAWOWY
+Programowanie proceduralne, obsługa plików, operacje bitowe i testowanie
+1. Czym jest funkcja i jak wygląda składnia jej definicji?
+2. Jakie są sposoby przekazywania informacji do funkcji i czym się one różnią?
+3. Co to znaczy, że funkcja zwraca wartość i jak odebrać tą wartość w kodzie?
+4. Jakie znasz sposoby na przekazywanie tablic do funkcji?
+5. Jakie są reguły przeciążania nazw funkcji?
+6. Jak działa mechanizm obsługi wyjątków (omów składnię i przebieg sterowania)?
+7. Co się stanie jeśli wyjątek nie zostanie obsłużony za blokiem try?
+8. Jak działa mechanizm rekurencji i jak definiuje się algorytmy rekurencyjne?
+9. Jakie są tryby pracy z plikami?
+10. Jak można pozycjonować głowicę komunikacyjną w pliku?
+11. Jakie znasz operacje bitowe i jak one działają?
+12. Jak odczytać i zapisać pojedynczy bit w zmiennej ?
+13. Jakie wymagania stawiamy testom jednostkowym?
+14. Jaka działa test jednostkowy?
+15. Jakie są założenia techniki TDD i jak piszę się według niej kod?
+
+Złożone typy danych i podstawy programowania obiektowego
+1. Co to jest struktura i jak się wykonuje na niej operacje?
+2. Czym różni się struktura od tablicy i kiedy stosujemy jedno, a kiedy drugie?
+3. Jakie znasz sposoby na definiowanie aliasów i do czego one służą?
+4. Jak działa i do czego służy typ wyliczeniowy?
+5. Czym jest klasa, a czym instancja klasy?
+6. Czym jest: pole klasy, metoda i jakie są korzyści z definiowania akcesorów?
+7. Na czym polega zasada enkapsulacji?
+8. Co to są składniki statyczne klasy?
+9. Czym jest konstruktor i jakie znasz typy konstruktorów?
+10. Co to jest lista inicjalizacyjna konstruktora?
+11. Jak inicjalizowane są pola klasy?
+12. Jaką funkcję pełni destruktor klasy?
+13. Jakie są sekcje dostępu do składników klasy i do czego one służą?
+14. Jakie znasz sposoby definiowania konwersji typów?
+15. Jaką rolę pełni specyfikator explicit i const (po nazwie metody)?
+
+Interakcje obiektowe, zarządzanie pamięcią w klasach, programowanie generyczne
+1. Czym jest zależność między klasami?
+2. Jakie są różnice między asocjacją, a agregacją?
+3. Czym różni się agregacja od kompozycji?
+4. Czym rożni się kompozycja od dziedziczenia?
+5. Na czym polega polimorfizm obiektowy?
+6. Co to jest klasa abstrakcyjna, i jak się ją definiuje?
+7. Jakie znasz sposoby dziedziczenia i jak przekładają się na dostęp do odziedziczonych składników?
+8. Jaka jest kolejność działania konstruktorów przy dziedziczeniu a jaka przy kompozycji?
+9. Jakie są mechanizmy kopiowania i kiedy należy je definiować ręcznie?
+10. Co jest kluczowym krokiem przy definiowaniu przenoszenia?
+11. Czym różni się kopia płytka od kopii głębokiej?
+12. Co to jest szablon i do czego służy?
+13. Co to jest specjalizacja szablonu i jak ją zdefiniować dla klasy?
+14. Jakie znasz standardowe kontenery STL i jak one działają?
+15. Czym są inteligentne wskaźniki i jakie znasz ich rodzaje?
+
+POZIOM ŚREDNI:
+1. Jak można zgłosić informację, czy funkcja zakończyła się niepoprawnie?
+2. Jakie znasz sposoby na odebranie z funkcji więcej niż jednej wartości?
+3. Jak definiuje się domyślne wartości argumentów funkcji i na jakie problemy możemy napotkać przy ich stosowaniu?
+4. Jak przechwycić wyjątek dowolnego typu?
+5. Gdzie powinna zachodzić obsługa sytuacji wyjątkowej?
+6. Jak napisać test jednostkowy sprawdzający czy funkcja poprawnie wyrzuci wyjątek?
+7. Jakie znasz sposoby na inicjalizację pól klasy i czym się one różnią?
+8. Czym różni się definicja metody zewnętrzna od wewnętrznej?
+9. Jak działa relacja przyjaźni i jakie są przesłanki do jej stosowania?
+10. W jakiej kolejności zadziałają konstruktory, gdy klasa jest kompozytem pochodnym od innego kompozytu?
+11. Jak uniemożliwić dalsze dziedziczenie klas i/lub metod i jak to się przekłada na działanie polimorfizmu?
+12. Jak można się dostać do przesłoniętych (przez dziedziczenie) składników klasy, a jak do odziedziczonych składników prywatnych?
+13. Jakie znasz typy interakcji między klasami i kiedy zastosujesz poszczególne typy?
+14. Dlaczego nie trzeba definiować konwersji klasa pochodna -> klasa bazowa, i gdzie takie konwersje mają zastosowanie?
+15. Jakie znasz sposoby rzutowania w C++ i do czego one służą?
+16. Jakie są różnice w przekazywaniu informacji do funkcji przez referencję i przez wskaźnik?
+17. Do czego służy specyfikator mutable i jak zainicjalizować pola stałe w klasie?
+18. Co to są maski bitowe i jak się z nich korzysta?
+19. Na czym polega polimorfizm proceduralny?
+20. Czym są konwersje niejawne, kiedy mogą zajść i jak się przed nimi ustrzec?
+21. Jak zdefiniować mechanizmy przenoszenia w klasie pochodnej, jeśli zostały one zdefiniowane w klasie bazowej?
+22. Na czym polega zasada DRY i jakie możesz podać przykłady jej stosowania?
+23. Czym jest refaktoryzacja kodu i jakie znasz typowe przekształcenia refaktoryzacyjne?
+24. Czym jest klasa czysto statyczna i do czego może służyć? 
+
+POZIOM ZAAWANSOWANY:
+1. Czym jest funktor i czym rożni się od funkcji?
+2. Co to jest maszyna stanu i jak się ją programuje?
+3. Jakie kroki powinniśmy podjąć definiując konstruktor kopiujący i kopiujący operator przypisania?
+4. Na czym polega idiom Copy-On-Write?
+5. Jak wymusić na kompilatorze automatyczną dedukcje typów i jakie są jej reguły?
+6. Jak działa mechanizm sygnałów i slotów w Qt?
+7. W jaki sposób QtDesigner tworzy ukrytą klasę interfejsu i jak się z nią komunikujemy?
+8. Czym rożni się inicjalizacja int a = 5.0; od int a{5.0}?
+9. Jak odebrać dodatkowe parametry przy uruchomieniu programu?
+10. Jakie możesz podać zalecenia przy definiowaniu operatora porównania dla klas o bardzo złożonej strukturze wewnętrznej?

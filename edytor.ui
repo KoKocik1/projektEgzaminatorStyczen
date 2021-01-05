@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>edytor</class>
+ <widget class="QDialog" name="edytor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>608</width>
+    <height>440</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0" colspan="4">
+    <widget class="QLabel" name="TYTUL">
+     <property name="text">
+      <string>TYTUŁ</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="4">
+    <widget class="QPushButton" name="readPlik">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>Z PLIKU</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" rowspan="9" colspan="4">
+    <widget class="QPlainTextEdit" name="poleTekstowe"/>
+   </item>
+   <item row="1" column="4">
+    <widget class="QPushButton" name="readBaza">
+     <property name="text">
+      <string>Z BAZY</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="4">
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>72</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="3" column="4">
+    <widget class="QPushButton" name="readPK">
+     <property name="text">
+      <string>wczytaj PK</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="4">
+    <widget class="QPushButton" name="readPPK">
+     <property name="text">
+      <string>wczytaj PPK</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="4">
+    <widget class="QPushButton" name="readDyplom">
+     <property name="text">
+      <string>wczytaj DYPLOM</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="4">
+    <widget class="QPushButton" name="readStud">
+     <property name="text">
+      <string>wczytaj studentow</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="4">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>94</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="8" column="4">
+    <widget class="QPushButton" name="saveBase">
+     <property name="text">
+      <string>zapisz zmiany do bazy</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="4">
+    <widget class="QPushButton" name="savePlik">
+     <property name="text">
+      <string>zapisz zmiany do pliku</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="0">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>126</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="10" column="1">
+    <widget class="QPushButton" name="back">
+     <property name="text">
+      <string>BACK</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="2">
+    <widget class="QPushButton" name="next">
+     <property name="text">
+      <string>NEXT</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="3">
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>158</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="10" column="4">
+    <widget class="QPushButton" name="koniec">
+     <property name="text">
+      <string>koniec</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

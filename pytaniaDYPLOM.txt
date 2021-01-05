@@ -1,0 +1,50 @@
+Pytania ogólne - Administracja, sieci komputerowe i technologie internetowe:
+(A-01) Omówić struktury sieci komputerowych. Proszę wymienić i krótko scharakteryzować poznane struktury sieci komputerowych, oraz porównać je ze sobą pod względem bezpieczeństwa, niezawodności i efektywności.
+(A-02) Omówić model ISO/OSI. Proszę wymienić i krótko scharakteryzować warstwy modelu ISO/OSI, oraz przedstawić jakie urządzenia sieciowe i usługi pracują w poszczególnych warstwach.
+(A-03) Omówić adresowanie sieci. Proszę omówić na czym polega adresowane sieci komputerowej oraz przedstawić zasadnicze różnice pomiędzy IPv4 i IPv6.
+(A-04) Omówić routing. Proszę wyjaśnić pojęcie routingu i rolę routera w sieci komputerowej, oraz porównać routing statyczny i dynamiczny.
+(A-05) Omówić serwer DHCP. Proszę wyjaśnić rolę serwera DHCP w sieci komputerowej, oraz czym się różni dynamiczne i statyczne przyznawanie adresów w sieci.
+(A-06) Omówić wirtualne sieci prywatne. Proszę wyjaśnić jak działa i do czego służy VPN, oraz omówić jak może przysłużyć się bezpieczeństwu w sieci.
+(A-07) Omówić działania zapory ogniowej. Proszę wyjaśnić rolę i działanie zapory ogniowej, oraz omówić jakie reguły i polityki stosuje się wobec ruchu sieciowego.
+(A-08) Omówić bazy danych. Proszę wymienić i krótko omówić podzbiory języka SQL, oraz wyjaśnić zasadę działania relacyjnych baz danych.
+(A-09) Omówić oprogramowanie szkodliwe. Proszę wymienić i krótko scharakteryzować najpopularniejsze rodzaje szkodliwego oprogramowania, oraz przedstawić sposoby i narzędzia służące do obrony przed poszczególnymi typami.
+(A-10) Omówić programowanie sieciowe. Proszę omówić przeznaczanie zmiennych sesyjnych w aplikacji internetowej i porównać pod względem działania i przeznaczenia skrypty serwerowe i klienckie.
+Pytania ogólne - Automatyka, elektrotechnika, elektronika i robotyka:
+(B-01) Omówić układ automatycznej regulacji. Proszę narysować i omówić schemat układu automatycznej regulacji, oraz przedstawiać jakie cele stawia się układom automatycznej regulacji.
+(B-02) Omówić stabilność układu regulacji. Proszę wyjaśnić co to znaczy, że układ automatycznej regulacji jest stabilny, oraz omówić jakie czynniki mają wpływ na stabilność obiektu/układu.
+(B-03) Omówić działanie regulatora typu P. Proszę omówić działanie i nastawy regulatora proporcjonalnego, oraz przedstawić zalecenia i przeciwskazania stosowania go w układzie regulacji.
+(B-04) Omówić działanie regulatora typu I. Proszę omówić działanie i nastawy regulatora całkującego, oraz przedstawić zalecenia i przeciwskazania stosowania go w układzie regulacji.
+(B-05) Omówić działanie tranzystorów. Proszę przedstawić podstawowe charakterystyki poznanych typów tranzystorów, oraz przedstawić ich typowe zastosowania w układach cyfrowych i analogowych.
+(B-06) Omówić bramki logiczne. Proszę wymienić i krótko scharakteryzować działanie bramek logicznych, oraz przedstawić różnice w budowie i projektowaniu układów kombinacyjnych i sekwencyjnych.
+(B-07) Omówić aktuatory. Proszę wymienić rodzaje poznanych aktuatorów, oraz porównać 2 dowolne, wybrane pod względem siły i drogi nastawiania.
+(B-08) Proszę omówić roboty przemysłowe. Proszę wymienić i krótko omówić działanie typowych członów konstrukcyjnych manipulatorów przemysłowych, oraz omówić rodzaje układów współrzędnych służących do opisu sterowania robotem.
+(B-09) Omówić podstawowe pasywne elementy elektryczne. Proszę omówić przeznaczenie podstawowych pasywnych elementów elektrycznych, oraz omówić ich modelowanie w zależności od typu obwodu.
+(B-10) Omówić obwody RLC. Proszę przedstawić konfiguracje typowych obwodów RLC, oraz omówić ich zastosowanie w filtracji sygnałów.
+(B-11) Omówić urządzenia pomiarowe. Proszę przedstawić rodzaje mierników analogowych wielkości elektrycznych, oraz omówić błędy i niepewności pomiarowe.
+Pytania ogólne - Programowanie, algorytmika i inżynieria oprogramowania:
+(C-01) Omówić instrukcje sterujące w programowaniu strukturalnym. Proszę wymienić i omówić zastosowanie wszystkich instrukcji sterujących w języku C i C++, oraz zaproponować jak można dokonać optymalizacji ich przetwarzania.
+(C-02) Omówić podział i organizację kodu w programowaniu. Proszę wymienić i krótko scharakteryzować poznane techniki podziału i organizacji kodu programu, oraz zdefiniować pojęcie refaktoryzacji kodu i wyjaśnić w jakim celu się ją stosuje.
+(C-03) Omówić podstawowe terminy programowania obiektowego. Proszę zdefiniować pojęcia: klasa, instancja, metoda, konstruktor i akcesor, oraz wytłumaczyć zasadę hermetyzacji (enkapsulacji) w odniesieniu do pojedynczej klasy i korzyści płynące z jej stosowania.
+(C-04) Omówić typy interakcji w programowaniu obiektowym. Proszę wymienić i krótko omówić podstawowe typy relacji miedzy klasami (z uwypukleniem różnic między nimi), oraz wyjaśnić jakie korzyści i problemy związane są z ich występowaniem programie obiektowym.
+(C-05) Omówić operacje logiczne. Proszę omówić podstawowe operacje logiczne OR, AND, NOT, XOR, oraz na przykładzie omówić zasady i sposoby optymalizacji wyrażeń logicznych w C/C++.
+(C-06) Omówić złożoność obliczeniową algorytmów. Proszę wyjaśnić co to jest złożoność przestrzenna i czasowa algorytmów, oraz omówić klasy złożoności algorytmów.
+(C-07) Omówić paradygmaty programowania. Proszę wymienić i krótko scharakteryzować poznane paradygmaty programowania (podając przykłady języków), oraz przedstawić różnice pomiędzy językami kompilowanymi i interpretowanymi.
+(C-08) Omówić struktury danych. Proszę wymienić i krótko scharakteryzować poznane struktury danych i wyjaśnić jaka jest podstawowa różnica pomiędzy strukturami statycznymi i dynamicznymi.
+(C-09) Omówić polimorfizm obiektowy. Proszę wyjaśnić pojęcie klasy abstrakcyjnej, oraz posługując się praktycznym przykładem wyjaśnić na czym polega polimorfizm obiektowy.
+(C-10) Omówić sposoby kopiowania danych. Proszę omówić na czym polegają: kopia binarna i kopia element-po-elemencie, oraz wyjaśnić kiedy można/należy je stosować .
+Pytania tylko dla spejaności Programowanie Komputerów:
+(D-01) Omówić sposoby kopiowania instancji w programowaniu obiektowym. Proszę omówić różnicę pomiędzy kopią płytką, a kopią głęboką, oraz wyjaśnić jakie są konsekwencje stosowania jednej i drugiej.
+(D-02) Omówić algorytmy sortowania. Proszę wymienić i krótko scharakteryzować poznane algorytmy sortowania danych, oraz przedstawić ich słabe i mocne strony, w kontekście właściwości i stopnia uporządkowania danych.
+(D-03) Omówić operacje wskaźnikowe w C/C++. Proszę wyjaśnić co to jest wskaźnik, jakie operacje można na nim wykonać i czym różni się od referencji, oraz omówić zastosowania wskaźników i referencji w C++.
+(D-04) Omówić konstrukcje wskaźnikowe w C/C++. Proszę wyjaśnić co to jest wskaźnik na wskaźnik i jakie są jego zastosowania, oraz omówić jak tworzone są wielowymiarowe tablice dynamiczne w C++.
+(D-05) Omówić operacje bitowe w C/C++. Proszę wymienić i krótko scharakteryzować operacje bitowe dostępne w C++, oraz przedstawić ich praktyczne zastosowania w programowaniu.
+(D-06) Omówić działanie mechanizmu rekurencji. Proszę wyjaśnić jak działa mechanizm rekurencji, oraz jak projektuje się algorytmy rekurencyjne.
+(D-07) Omówić testowanie aplikacji. Proszę wymienić i krótko scharakteryzować poznane rodzaje testów aplikacji, oraz przedstawić jakie aspekty programu mogą podlegać testowaniu.
+(D-08) Omówić testy jednostkowe. Proszę zdefiniować i krótko scharakteryzować pojęcie testu jednostkowego, oraz przedstawić korzyści ze stosowania metody Test Driven Development w procesie pisania kodu.
+(D-09) Omówić metodyki rozwijania aplikacji. Proszę omówić charakterystykę procesu Scrum’owego, oraz porównać metodyki rozwijania produktu informatycznego z podziałem na ciężkie i zwinne.
+(D-10) Omówić techniki wytwarzania aplikacji. Proszę wymienić i krótko scharakteryzować etapy cyklu życia oprogramowania, oraz przedstawić korzyści ze stosowania modelu iteracyjnego.
+(D-11) Omówić wzorce projektowe. Proszę podać przykład i zdefiniować pojęcie wzorca projektowego, oraz wyjaśnić jakie korzyści płyną ze stosowania wzorów projektowych.
+(D-12) Omówić algorytmy przeszukiwania. Proszę wymienić poznane algorytmy przeszukiwania grafów i struktur drzewiastych, oraz porównać ich zalety, wady i zastosowania.
+(D-13) Omówić operacje morfologiczne. Proszę wyjaśnić działanie progowania, dylatacji i erozji, oraz przedstawić ich zastosowania w procesie przetwarzania obrazów cyfrowych.
+(D-14) Omówić algorytmy klasyfikacji. Proszę omówić działanie algorytmu najbliższego sąsiada/najbliższych sąsiadów, oraz przedstawić i krótko omówić inne poznane algorytmy klasyfikacji danych.
+(D-15) Omówić sieci neuronowe. Proszę przedstawić i omówić budowę neuronu w sztucznej sieci neuronowej, oraz wymienić i omówić metody uczenia sztucznej sieci neuronowych.
