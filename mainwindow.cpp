@@ -15,12 +15,19 @@
 using namespace std;
 
 //deklaracje static
+QString MainWindow::nazwaPlikuDyplom="pytaniaDYPLOM.txt";
+QString MainWindow::nazwaPlikuStudenci="studenci.txt";
+QString MainWindow::nazwaPlikuPK="pytaniaPK.txt";
+QString MainWindow::nazwaPlikuPPK="pytaniaPPK.txt";
+QString MainWindow::nazwaBazy="mydb.db";
+
+
 PK_PPK* MainWindow::egzamin=nullptr;
-DYPLOMOWY* MainWindow::dyplom=new DYPLOMOWY("pytaniaDYPLOM.txt");
-Student* MainWindow::student=new Student("studenci.txt");
-PK_PPK* MainWindow::pk=new PK_PPK("pytaniaPK.txt");
-PK_PPK* MainWindow::ppk=new PK_PPK("pytaniaPPK.txt");
-bazaDanych* MainWindow::baza=new bazaDanych(student,pk,ppk,dyplom);
+DYPLOMOWY* MainWindow::dyplom=new DYPLOMOWY(nazwaPlikuDyplom);
+Student* MainWindow::student=new Student(nazwaPlikuStudenci);
+PK_PPK* MainWindow::pk=new PK_PPK(nazwaPlikuPK);
+PK_PPK* MainWindow::ppk=new PK_PPK(nazwaPlikuPPK);
+bazaDanych* MainWindow::baza=new bazaDanych(student,pk,ppk,dyplom,nazwaBazy);
 
 
 
@@ -30,13 +37,23 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    if(student->getIleStudentow()==0){
+        QStringList puste;
+        puste.push_back("brak studentow");
+        ui->ImieStudenta->addItems(puste);
+    }
+    else
     ui->ImieStudenta->addItems(student->getLista());
+
 
 
 //ustawienie aktualnego studenta
 
     //zwolnienie
 if(ui->jakiEgzamin->currentIndex()!=2){
+    if(student->getIleStudentow()==0)
+        ui->Zwolnienie_z_podst->setText("Brak zwolnienia z części podstawowej");
+    else{
         if(student->getSrednia(0)>=5)
         {
             ui->Zwolnienie_z_podst->setText("   Zwolnienie z częsci podstawowej   ");
@@ -44,11 +61,15 @@ if(ui->jakiEgzamin->currentIndex()!=2){
         else{
             ui->Zwolnienie_z_podst->setText("Brak zwolnienia z części podstawowej");
         }
+    }
 }
 else
     ui->Zwolnienie_z_podst->setText("           EGZAMIN DYPLOMOWY         ");
 
          //liczba dodatkowych pytan
+if(student->getIleStudentow()==0)
+   ui->IleDodPyt->display(0);
+    else
     ui->IleDodPyt->display(student->zwolnienie(0));
 
 egzamin=pk;
@@ -66,10 +87,10 @@ egzamin=pk;
     srand(time(0));
 
 baza->stworzTabele();
-baza->wypelnijTabelePytania();
-baza->wypelnijTabeleStudenci();
-
-m_okienko=new edytor(this,baza);
+//baza->wypelnijTabelePytania();
+//baza->wypelnijTabeleStudenci();
+on_wczytajPlik_clicked();
+m_okienko=new edytor(nazwaPlikuPK,nazwaPlikuPPK,nazwaPlikuDyplom,nazwaPlikuStudenci,nazwaBazy,this,baza,student);
 }
 
 
@@ -129,10 +150,22 @@ if(ui->jakiEgzamin->currentIndex()==2){
         ui->pyt3->setFontWeight(1);
         ui->dodatkowe_pytania->setFontWeight(1);
 
+        if(dyplom->get_ilePytanDyplomA()>0)
     ui->pyt1->append(dyplom->getDyplomA());
+        else
+            ui->pyt1->setText("brak takiej ilosci pytan");
+        if(dyplom->get_ilePytanDyplomB()>0)
     ui->pyt2->append(dyplom->getDyplomB());
+        else
+            ui->pyt2->setText("brak takiej ilosci pytan");
+        if(dyplom->get_ilePytanDyplomC()>0)
     ui->pyt3->append(dyplom->getDyplomC());
+        else
+            ui->pyt3->setText("brak takiej ilosci pytan");
+        if(dyplom->get_ilePytanDyplomD()>0)
     ui->dodatkowe_pytania->append(dyplom->getDyplomD());
+        else
+            ui->dodatkowe_pytania->setText("brak takiej ilosci pytan");
     ui->start->setText("RESET");
 
 
@@ -140,7 +173,7 @@ if(ui->jakiEgzamin->currentIndex()==2){
 
 //losowanie dla podstawowych
 if(ui->comboBox_3->currentIndex()==0){
-
+    ui->dodatkowe_pytania->setDisabled(1);
 ui->dodPytPodstA->setDisabled(1);
 ui->dodPytPodstB->setDisabled(1);
 ui->dodPytPodstC->setDisabled(1);
@@ -167,19 +200,27 @@ else
     ui->pyt2->setFontWeight(1);
     ui->pyt3->setFontWeight(1);
 }
-
+if(egzamin->get_ile_pytanPodstawowychPKa()>=ui->dodPytPodstA->value()){
      for(int ile=0;ile<=ui->dodPytPodstA->value();ile++){
          egzamin->losujPodstawoweA();
               ui->pyt1->append(egzamin->getWczytane_pytaniaPodstawowePKAIndeks(egzamin->get_wylosowane_podstawowePKaIndeks(ile)));
      }
+}else
+    ui->pyt1->setText("brak takiej ilosci pytan");
+if(egzamin->get_ile_pytanPodstawowychPKb()>=ui->dodPytPodstB->value()){
      for(int ile=0;ile<=ui->dodPytPodstB->value();ile++){
          egzamin->losujPodstawoweB();
               ui->pyt2->append(egzamin->getWczytane_pytaniaPodstawowePKBIndeks(egzamin->get_wylosowane_podstawowePKbIndeks(ile)));
      }
+}else
+    ui->pyt2->setText("brak takiej ilosci pytan");
+     if(egzamin->get_ile_pytanPodstawowychPKc()>=ui->dodPytPodstC->value()){
      for(int ile=0;ile<=ui->dodPytPodstC->value();ile++){
          egzamin->losujPodstawoweC();
               ui->pyt3->append(egzamin->getWczytane_pytaniaPodstawowePKCIndeks(egzamin->get_wylosowane_podstawowePKcIndeks(ile)));
      }
+     }else
+         ui->pyt3->setText("brak takiej ilosci pytan");
 }
 else if(ui->comboBox_3->currentIndex()==1){
     ui->dodPytSred->setDisabled(1);
@@ -187,12 +228,25 @@ else if(ui->comboBox_3->currentIndex()==1){
     ui->pyt2->clear();
     ui->pyt3->clear();
     ui->dodatkowe_pytania->clear();
+    ui->pyt2->setDisabled(1);
+    ui->pyt3->setDisabled(1);
+    ui->dodatkowe_pytania->setDisabled(1);
 
+    ui->pyt1->setFontWeight(99);
+    ui->pyt1->setText("Poziom średni:\n");
+    ui->pyt1->setFontWeight(1);
+
+
+    if(egzamin->get_ile_pytanSrednichPK()>=ui->dodPytSred->value()){
     for(int ile=0;ile<=ui->dodPytSred->value();ile++){
         egzamin->losujSrednie();
         ui->pyt1->append(egzamin->getWczytane_pytaniaSredniePKIndeks(egzamin->get_wylosowane_srednieIndeks(ile)));
     }
+    }else
+        ui->pyt3->setText("brak takiej ilosci pytan");
 
+
+    ui->pyt1->setFixedHeight(ui->pyt1->height()+150);
 
 }else {
      ui->dodPytTrud->setDisabled(1);
@@ -201,11 +255,19 @@ else if(ui->comboBox_3->currentIndex()==1){
     ui->pyt3->clear();
     ui->dodatkowe_pytania->clear();
 
+    ui->pyt1->setFontWeight(99);
+    ui->pyt1->setText("Poziom trudny:\n");
+    ui->pyt1->setFontWeight(1);
+
+        if(egzamin->get_ile_pytanTrudnychPk()>=ui->dodPytTrud->value()){
     for(int ile=0;ile<=ui->dodPytTrud->value();ile++){
         egzamin->losujTrudne();
 
          ui->pyt1->append(egzamin->getWczytane_pytaniaTrudnePKIndeks(egzamin->get_wylosowane_trudneIndeks(ile)));
     }
+}else
+    ui->pyt3->setText("brak takiej ilosci pytan");
+
 
 
 }
@@ -226,6 +288,10 @@ void MainWindow::on_start_clicked()
 
 
     if(ui->start->text()=="RESET"){
+        ui->pyt3->setEnabled(1);
+        ui->pyt2->setEnabled(1);
+        ui->dodatkowe_pytania->setEnabled(1);
+        ui->pyt1->setFixedHeight(ui->pyt1->height()-150);
         ui->edycja->setEnabled(1);
         ui->dodPytPodstA->setValue(0);
         ui->dodPytPodstB->setValue(0);
@@ -348,6 +414,9 @@ void MainWindow::on_jakiEgzamin_activated(int index)
             problem=1;}
             ui->pyt3->setText("BLĘDNA NAZWA PLIKU");
             if(ui->jakiEgzamin->currentIndex()!=2){
+                if(student->getIleStudentow()==0)
+                    ui->Zwolnienie_z_podst->setText("Brak zwolnienia z części podstawowej");
+                else{
                     if(MainWindow::student->getSrednia(ui->ImieStudenta->currentIndex())>=5)
                     {
                         ui->Zwolnienie_z_podst->setText("   Zwolnienie z częsci podstawowej   ");
@@ -355,6 +424,7 @@ void MainWindow::on_jakiEgzamin_activated(int index)
                     else{
                         ui->Zwolnienie_z_podst->setText("Brak zwolnienia z części podstawowej");
                     }
+                }
             }
     }else if(index==1){
         MainWindow::egzamin=MainWindow::ppk;
@@ -371,6 +441,9 @@ void MainWindow::on_jakiEgzamin_activated(int index)
             problem=1;
         }
         if(ui->jakiEgzamin->currentIndex()!=2){
+            if(student->getIleStudentow()==0)
+                ui->Zwolnienie_z_podst->setText("Brak zwolnienia z części podstawowej");
+            else{
                 if(MainWindow::student->getSrednia(ui->ImieStudenta->currentIndex())>=5)
                 {
                     ui->Zwolnienie_z_podst->setText("   Zwolnienie z częsci podstawowej   ");
@@ -378,6 +451,7 @@ void MainWindow::on_jakiEgzamin_activated(int index)
                 else{
                     ui->Zwolnienie_z_podst->setText("Brak zwolnienia z części podstawowej");
                 }
+            }
         }
     }else{
         if(MainWindow::dyplom->raportBladZczytywanie()==1){
@@ -538,4 +612,41 @@ void MainWindow::sprawdzWyswietlacz(){
 void MainWindow::on_edycja_clicked()
 {
     m_okienko->exec();
+}
+
+void MainWindow::on_wczytajPlik_clicked()
+{
+    ui->coWczytane->setText("pytania z pliku");
+    ui->start->setEnabled(1);
+
+    pk->zaladujPonowniePlik();
+    ppk->zaladujPonowniePlik();
+    dyplom->zaladujPonowniePlik();
+    student->zaladujPonownieStudentow();
+    ui->ImieStudenta->clear();
+    if(student->getIleStudentow()==0){
+        QStringList puste;
+        puste.push_back("brak studentow");
+        ui->ImieStudenta->addItems(puste);
+    }
+    else
+    ui->ImieStudenta->addItems(student->getLista());
+
+}
+
+void MainWindow::on_wczytajBaze_clicked()
+{
+    ui->coWczytane->setText("pytania z bazy");
+    ui->start->setEnabled(1);
+    baza->zapisBazaDoPlik();
+    ui->ImieStudenta->clear();
+    if(student->getIleStudentow()==0){
+        QStringList puste;
+        puste.push_back("brak studentow");
+        ui->ImieStudenta->addItems(puste);
+    }
+    else
+    ui->ImieStudenta->addItems(student->getLista());
+
+
 }

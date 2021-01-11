@@ -10,14 +10,14 @@ private:
     QString m_plik_pytania;
 
 
+
+
     //zczytane pytania
     QStringList wczytane_pytaniaPodstawowePKA;
     QStringList  wczytane_pytaniaPodstawowePKB;
     QStringList wczytane_pytaniaPodstawowePKC;
     QStringList  wczytane_pytaniaSredniePK;
     QStringList  wczytane_pytaniaTrudnePK;
-
-
 
     //ile jest pytan
     int ile_pytanPodstawowychPKa=0;
@@ -47,6 +47,12 @@ private:
 public:
     PK_PPK();
     PK_PPK(QString);
+
+    void zaladujZbazy(QStringList,QStringList,QStringList,QStringList,QStringList);
+    void resetDanychListy();
+    void wczytajPlik();
+    void zaladujPonowniePlik();
+    void zaladujZbazy(QString);
 
     //bledy
     int raportBrakNazwy(){

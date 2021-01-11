@@ -13,10 +13,11 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QGridLayout>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QTextEdit>
 
 QT_BEGIN_NAMESPACE
 
@@ -26,8 +27,9 @@ public:
     QGridLayout *gridLayout;
     QLabel *TYTUL;
     QPushButton *readPlik;
-    QPlainTextEdit *poleTekstowe;
+    QTextEdit *poleTekstowe;
     QPushButton *readBaza;
+    QLabel *skadZczytane;
     QSpacerItem *verticalSpacer_2;
     QPushButton *readPK;
     QPushButton *readPPK;
@@ -36,6 +38,7 @@ public:
     QSpacerItem *verticalSpacer;
     QPushButton *saveBase;
     QPushButton *savePlik;
+    QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
     QPushButton *back;
     QPushButton *next;
@@ -53,84 +56,97 @@ public:
         TYTUL->setObjectName(QString::fromUtf8("TYTUL"));
         TYTUL->setAlignment(Qt::AlignCenter);
 
-        gridLayout->addWidget(TYTUL, 0, 0, 1, 4);
+        gridLayout->addWidget(TYTUL, 0, 0, 1, 1);
 
         readPlik = new QPushButton(edytor);
         readPlik->setObjectName(QString::fromUtf8("readPlik"));
         readPlik->setEnabled(false);
 
-        gridLayout->addWidget(readPlik, 0, 4, 1, 1);
+        gridLayout->addWidget(readPlik, 0, 1, 1, 1);
 
-        poleTekstowe = new QPlainTextEdit(edytor);
+        poleTekstowe = new QTextEdit(edytor);
         poleTekstowe->setObjectName(QString::fromUtf8("poleTekstowe"));
 
-        gridLayout->addWidget(poleTekstowe, 1, 0, 9, 4);
+        gridLayout->addWidget(poleTekstowe, 1, 0, 10, 1);
 
         readBaza = new QPushButton(edytor);
         readBaza->setObjectName(QString::fromUtf8("readBaza"));
 
-        gridLayout->addWidget(readBaza, 1, 4, 1, 1);
+        gridLayout->addWidget(readBaza, 1, 1, 1, 1);
+
+        skadZczytane = new QLabel(edytor);
+        skadZczytane->setObjectName(QString::fromUtf8("skadZczytane"));
+        skadZczytane->setAlignment(Qt::AlignCenter);
+
+        gridLayout->addWidget(skadZczytane, 2, 1, 1, 1);
 
         verticalSpacer_2 = new QSpacerItem(20, 72, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        gridLayout->addItem(verticalSpacer_2, 2, 4, 1, 1);
+        gridLayout->addItem(verticalSpacer_2, 3, 1, 1, 1);
 
         readPK = new QPushButton(edytor);
         readPK->setObjectName(QString::fromUtf8("readPK"));
 
-        gridLayout->addWidget(readPK, 3, 4, 1, 1);
+        gridLayout->addWidget(readPK, 4, 1, 1, 1);
 
         readPPK = new QPushButton(edytor);
         readPPK->setObjectName(QString::fromUtf8("readPPK"));
 
-        gridLayout->addWidget(readPPK, 4, 4, 1, 1);
+        gridLayout->addWidget(readPPK, 5, 1, 1, 1);
 
         readDyplom = new QPushButton(edytor);
         readDyplom->setObjectName(QString::fromUtf8("readDyplom"));
 
-        gridLayout->addWidget(readDyplom, 5, 4, 1, 1);
+        gridLayout->addWidget(readDyplom, 6, 1, 1, 1);
 
         readStud = new QPushButton(edytor);
         readStud->setObjectName(QString::fromUtf8("readStud"));
 
-        gridLayout->addWidget(readStud, 6, 4, 1, 1);
+        gridLayout->addWidget(readStud, 7, 1, 1, 1);
 
         verticalSpacer = new QSpacerItem(20, 94, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        gridLayout->addItem(verticalSpacer, 7, 4, 1, 1);
+        gridLayout->addItem(verticalSpacer, 8, 1, 1, 1);
 
         saveBase = new QPushButton(edytor);
         saveBase->setObjectName(QString::fromUtf8("saveBase"));
+        saveBase->setEnabled(false);
 
-        gridLayout->addWidget(saveBase, 8, 4, 1, 1);
+        gridLayout->addWidget(saveBase, 9, 1, 1, 1);
 
         savePlik = new QPushButton(edytor);
         savePlik->setObjectName(QString::fromUtf8("savePlik"));
+        savePlik->setEnabled(false);
 
-        gridLayout->addWidget(savePlik, 9, 4, 1, 1);
+        gridLayout->addWidget(savePlik, 10, 1, 2, 1);
 
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalSpacer = new QSpacerItem(126, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        gridLayout->addItem(horizontalSpacer, 10, 0, 1, 1);
+        horizontalLayout->addItem(horizontalSpacer);
 
         back = new QPushButton(edytor);
         back->setObjectName(QString::fromUtf8("back"));
 
-        gridLayout->addWidget(back, 10, 1, 1, 1);
+        horizontalLayout->addWidget(back);
 
         next = new QPushButton(edytor);
         next->setObjectName(QString::fromUtf8("next"));
 
-        gridLayout->addWidget(next, 10, 2, 1, 1);
+        horizontalLayout->addWidget(next);
 
         horizontalSpacer_2 = new QSpacerItem(158, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        gridLayout->addItem(horizontalSpacer_2, 10, 3, 1, 1);
+        horizontalLayout->addItem(horizontalSpacer_2);
+
+
+        gridLayout->addLayout(horizontalLayout, 11, 0, 2, 1);
 
         koniec = new QPushButton(edytor);
         koniec->setObjectName(QString::fromUtf8("koniec"));
 
-        gridLayout->addWidget(koniec, 10, 4, 1, 1);
+        gridLayout->addWidget(koniec, 12, 1, 1, 1);
 
 
         retranslateUi(edytor);
@@ -144,6 +160,7 @@ public:
         TYTUL->setText(QCoreApplication::translate("edytor", "TYTU\305\201", nullptr));
         readPlik->setText(QCoreApplication::translate("edytor", "Z PLIKU", nullptr));
         readBaza->setText(QCoreApplication::translate("edytor", "Z BAZY", nullptr));
+        skadZczytane->setText(QCoreApplication::translate("edytor", "Zczytane z pliku", nullptr));
         readPK->setText(QCoreApplication::translate("edytor", "wczytaj PK", nullptr));
         readPPK->setText(QCoreApplication::translate("edytor", "wczytaj PPK", nullptr));
         readDyplom->setText(QCoreApplication::translate("edytor", "wczytaj DYPLOM", nullptr));

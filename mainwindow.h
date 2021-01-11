@@ -41,6 +41,10 @@ private slots:
 
     void sprawdzWyswietlacz();
 
+    void on_wczytajPlik_clicked();
+
+    void on_wczytajBaze_clicked();
+
 private:
     Ui::MainWindow *ui;
     static edytor  *m_okienko;
@@ -57,6 +61,13 @@ private:
     int pamiecPytanSrednich=0;
     int pamiecPytanTrudnych=0;
     int pamiecIleDodatkowych=0;
+
+    static QString nazwaPlikuDyplom;
+    static QString nazwaPlikuStudenci;
+    static QString nazwaPlikuPK;
+    static QString nazwaPlikuPPK;
+    static QString nazwaBazy;
+
 
 
     //wskaznik na pk albo ppk

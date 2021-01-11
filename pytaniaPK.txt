@@ -60,7 +60,7 @@ POZIOM ŚREDNI:
 7. Jakie znasz sposoby na inicjalizację pól klasy i czym się one różnią?
 8. Czym różni się definicja metody zewnętrzna od wewnętrznej?
 9. Jak działa relacja przyjaźni i jakie są przesłanki do jej stosowania?
-10. W jakiej kolejności zadziałają konstruktory, gdy klasa jest kompozytem pochodnym od innego kompozytu?
+10. W jakiej kolejności zadziałają konstruktory, gdy klasa jest kompozytem pochodnym odinnego kompozytu?
 11. Jak uniemożliwić dalsze dziedziczenie klas i/lub metod i jak to się przekłada na działanie polimorfizmu?
 12. Jak można się dostać do przesłoniętych (przez dziedziczenie) składników klasy, a jak do odziedziczonych składników prywatnych?
 13. Jakie znasz typy interakcji między klasami i kiedy zastosujesz poszczególne typy?

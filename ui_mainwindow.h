@@ -34,13 +34,16 @@ public:
     QWidget *centralwidget;
     QGridLayout *gridLayout_2;
     QGridLayout *gridLayout;
-    QLabel *label_2;
+    QComboBox *jakiEgzamin;
     QLabel *label;
     QComboBox *ImieStudenta;
-    QComboBox *jakiEgzamin;
+    QLabel *label_2;
+    QPushButton *wczytajBaze;
+    QPushButton *wczytajPlik;
     QVBoxLayout *verticalLayout_3;
     QLabel *Zwolnienie_z_podst;
     QComboBox *comboBox_3;
+    QLabel *coWczytane;
     QSpacerItem *verticalSpacer;
     QLabel *label_5;
     QLCDNumber *IleDodPyt;
@@ -89,10 +92,13 @@ public:
         gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
         gridLayout = new QGridLayout();
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        label_2 = new QLabel(centralwidget);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
+        jakiEgzamin = new QComboBox(centralwidget);
+        jakiEgzamin->addItem(QString());
+        jakiEgzamin->addItem(QString());
+        jakiEgzamin->addItem(QString());
+        jakiEgzamin->setObjectName(QString::fromUtf8("jakiEgzamin"));
 
-        gridLayout->addWidget(label_2, 0, 0, 1, 1);
+        gridLayout->addWidget(jakiEgzamin, 1, 0, 1, 1);
 
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
@@ -104,13 +110,20 @@ public:
 
         gridLayout->addWidget(ImieStudenta, 1, 1, 1, 1);
 
-        jakiEgzamin = new QComboBox(centralwidget);
-        jakiEgzamin->addItem(QString());
-        jakiEgzamin->addItem(QString());
-        jakiEgzamin->addItem(QString());
-        jakiEgzamin->setObjectName(QString::fromUtf8("jakiEgzamin"));
+        label_2 = new QLabel(centralwidget);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
 
-        gridLayout->addWidget(jakiEgzamin, 1, 0, 1, 1);
+        gridLayout->addWidget(label_2, 0, 0, 1, 1);
+
+        wczytajBaze = new QPushButton(centralwidget);
+        wczytajBaze->setObjectName(QString::fromUtf8("wczytajBaze"));
+
+        gridLayout->addWidget(wczytajBaze, 1, 2, 1, 1);
+
+        wczytajPlik = new QPushButton(centralwidget);
+        wczytajPlik->setObjectName(QString::fromUtf8("wczytajPlik"));
+
+        gridLayout->addWidget(wczytajPlik, 0, 2, 1, 1);
 
 
         gridLayout_2->addLayout(gridLayout, 0, 0, 1, 1);
@@ -131,6 +144,12 @@ public:
         comboBox_3->setEnabled(false);
 
         verticalLayout_3->addWidget(comboBox_3);
+
+        coWczytane = new QLabel(centralwidget);
+        coWczytane->setObjectName(QString::fromUtf8("coWczytane"));
+        coWczytane->setAlignment(Qt::AlignCenter);
+
+        verticalLayout_3->addWidget(coWczytane);
 
         verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
@@ -259,6 +278,7 @@ public:
 
         start = new QPushButton(centralwidget);
         start->setObjectName(QString::fromUtf8("start"));
+        start->setEnabled(true);
 
         verticalLayout_3->addWidget(start);
 
@@ -315,17 +335,20 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        label_2->setText(QCoreApplication::translate("MainWindow", "Jaki to egzamin", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "Jaki student:", nullptr));
         jakiEgzamin->setItemText(0, QCoreApplication::translate("MainWindow", "PK", nullptr));
         jakiEgzamin->setItemText(1, QCoreApplication::translate("MainWindow", "PPK", nullptr));
         jakiEgzamin->setItemText(2, QCoreApplication::translate("MainWindow", "DYPLOMOWY", nullptr));
 
+        label->setText(QCoreApplication::translate("MainWindow", "Jaki student:", nullptr));
+        label_2->setText(QCoreApplication::translate("MainWindow", "Jaki to egzamin", nullptr));
+        wczytajBaze->setText(QCoreApplication::translate("MainWindow", "Wczytaj pytania z bazy", nullptr));
+        wczytajPlik->setText(QCoreApplication::translate("MainWindow", "Wczytaj pytania z pliku", nullptr));
         Zwolnienie_z_podst->setText(QString());
         comboBox_3->setItemText(0, QCoreApplication::translate("MainWindow", "Poziom podstawowy", nullptr));
         comboBox_3->setItemText(1, QCoreApplication::translate("MainWindow", "Poziom \305\233redni", nullptr));
         comboBox_3->setItemText(2, QCoreApplication::translate("MainWindow", "Poziom trudny", nullptr));
 
+        coWczytane->setText(QCoreApplication::translate("MainWindow", "pytania z pliku", nullptr));
         label_5->setText(QCoreApplication::translate("MainWindow", "Liczba dodatkowych pyta\305\204", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "Podstawa blok A", nullptr));
         label_9->setText(QCoreApplication::translate("MainWindow", "Podstawa blok B", nullptr));

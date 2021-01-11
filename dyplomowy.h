@@ -10,6 +10,7 @@ private:
     int ile_pytanB=0;
     int ile_pytanC=0;
     int ile_pytanD=0;
+    QString m_nazwaPliku;
 
     QStringList DyplomA;
     QStringList DyplomB;
@@ -23,6 +24,10 @@ private:
 public:
     DYPLOMOWY();
     DYPLOMOWY(QString);
+
+    void zaladujZbazy(QStringList,QStringList,QStringList,QStringList);
+    void wczytajPytaniaPlik();
+    void zaladujPonowniePlik();
 
     //bledy
     int raportBrakNazwy(){

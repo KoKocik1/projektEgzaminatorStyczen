@@ -5,9 +5,7 @@
 class Student
 {
 private:
-     QString plik_studenci="studenci.txt";
-
-     int ile=0;
+     QString plik_studenci;
 
      //sekcja dla studentow
      int ile_studentow=0;
@@ -17,9 +15,18 @@ private:
      QList<double> srednie;
 
      QStringList daneStudenta;
+     int ileSekcji;
 public:
      Student();
     Student(QString);
+
+    int ileSekcjijest(){
+        return ileSekcji;
+    }
+    void ileJestSekcji();
+    void zaladujStudentow();
+    void zaladujPonownieStudentow();
+    void zaladujBaze(QStringList,QStringList,QList<int>,QList<double>,QStringList);
 
     QStringList getLista(){
         return daneStudenta;
@@ -43,6 +50,11 @@ public:
         else
             return 0;
     }
+    int getIleStudentow(){
+        return ile_studentow;
+    }
+
+
 };
 
 #endif // STUDENT_H

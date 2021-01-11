@@ -15,13 +15,18 @@ private:
     PK_PPK* m_pk;
     PK_PPK* m_ppk;
     DYPLOMOWY* m_dyplomowy;
+    QString m_nazwaBazy;
+    QSqlDatabase m_db;
+    QSqlQuery query;
 
 
 public:
-    bazaDanych(Student*,PK_PPK*,PK_PPK*,DYPLOMOWY*);
+    bazaDanych(Student*,PK_PPK*,PK_PPK*,DYPLOMOWY*,QString);
+    bazaDanych(QString);
     void stworzTabele();
     void wypelnijTabeleStudenci();
     void wypelnijTabelePytania();
+    void zapisBazaDoPlik();
     QString selectPodstAPK();
     QString selectPodstBPK();
     QString selectPodstCPK();
@@ -41,6 +46,9 @@ public:
     QString selectPK();
     QString selectPPK();
     QString selectDYPLOM();
+    QString selectStudenci();
+    void wypelnijTabelePytania(QStringList,int,int);
+    void wypelnijStudenci(QStringList,QStringList,int,QList<double>);
 
 };
 
