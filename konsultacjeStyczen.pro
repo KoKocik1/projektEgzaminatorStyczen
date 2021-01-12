@@ -37,7 +37,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
-    mydb.db \
     pytaniaDYPLOM.txt \
     pytaniaPK.txt \
     pytaniaPPK.txt \
