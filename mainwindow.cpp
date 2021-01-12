@@ -291,9 +291,12 @@ void MainWindow::on_start_clicked()
 
     if(ui->pyt1->height()!=ui->pyt2->height())
         ui->pyt1->setFixedHeight(ui->pyt2->height());
-
+    ui->wczytajBaze->setDisabled(1);
+    ui->wczytajPlik->setDisabled(1);
 
     if(ui->start->text()=="RESET"){
+        ui->wczytajBaze->setDisabled(0);
+        ui->wczytajPlik->setDisabled(0);
         ui->pyt3->setEnabled(1);
         ui->pyt2->setEnabled(1);
         ui->dodatkowe_pytania->setEnabled(1);
