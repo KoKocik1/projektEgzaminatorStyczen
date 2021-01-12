@@ -68,6 +68,8 @@ private:
     static QString nazwaPlikuPPK;
     static QString nazwaBazy;
 
+    int h1;
+
 
 
     //wskaznik na pk albo ppk

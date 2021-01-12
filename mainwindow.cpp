@@ -171,6 +171,9 @@ if(ui->jakiEgzamin->currentIndex()==2){
 
 }else{
 
+    h1=ui->pyt1->height();
+
+
 //losowanie dla podstawowych
 if(ui->comboBox_3->currentIndex()==0){
     ui->dodatkowe_pytania->setDisabled(1);
@@ -246,6 +249,7 @@ else if(ui->comboBox_3->currentIndex()==1){
         ui->pyt3->setText("brak takiej ilosci pytan");
 
 
+    if(ui->dodPytSred->value()>3)
     ui->pyt1->setFixedHeight(ui->pyt1->height()+150);
 
 }else {
@@ -268,7 +272,8 @@ else if(ui->comboBox_3->currentIndex()==1){
 }else
     ui->pyt3->setText("brak takiej ilosci pytan");
 
-
+        if(ui->dodPytTrud->value()>3)
+        ui->pyt1->setFixedHeight(ui->pyt1->height()+150);
 
 }
 }
@@ -284,14 +289,18 @@ void MainWindow::on_start_clicked()
     ui->ImieStudenta->setDisabled(1);
     ui->edycja->setDisabled(1);
 
-
+    if(ui->pyt1->height()!=ui->pyt2->height())
+        ui->pyt1->setFixedHeight(ui->pyt2->height());
 
 
     if(ui->start->text()=="RESET"){
         ui->pyt3->setEnabled(1);
         ui->pyt2->setEnabled(1);
         ui->dodatkowe_pytania->setEnabled(1);
-        ui->pyt1->setFixedHeight(ui->pyt1->height()-150);
+        if(ui->pyt1->height()!=82)
+        ui->pyt1->setFixedHeight(h1);
+        if(ui->pyt1->height()!=ui->pyt2->height())
+            ui->pyt1->setFixedHeight(ui->pyt2->height());
         ui->edycja->setEnabled(1);
         ui->dodPytPodstA->setValue(0);
         ui->dodPytPodstB->setValue(0);
